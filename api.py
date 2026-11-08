@@ -4,7 +4,7 @@ from transformers import StoppingCriteria, StoppingCriteriaList
 
 
 model = AutoModelForCausalLM.from_pretrained("OpenELM-270M-Instruct", trust_remote_code=True)
-tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-2-7b-hf", token=os.environ.get("HF_TOKEN"))  # set HF_TOKEN in your environment
+tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-2-7b-hf", token=os.environ.get("HF_TOKEN"))
 # Set the pad_token as eos_token
 tokenizer.pad_token = tokenizer.eos_token
 MAX_OUTPUT_TOKENS = 200
